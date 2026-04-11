@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #1F2C41; /* Fundo azul menos dark */
+    --foreground: #F8FAFC;
+
+    --border: 215 25% 27%;
+    --input: 215 25% 27%;
+    --ring: 43 74% 49%;
+
+    --primary: 43 74% 49%; /* Dourado */
+    --primary-foreground: #020617;
+
+    --secondary: 217 33% 17%; /* Azul Marinho Secundario */
+    --secondary-foreground: #F8FAFC;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: #F8FAFC;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply backdrop-blur-md bg-white/5 border border-white/10 shadow-2xl;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-primary/20 rounded-full hover:bg-primary/40 transition-colors;
+  }
+
+  .will-change-transform {
+    will-change: transform, opacity;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    @apply antialiased overflow-x-hidden;
+  }
+
+  /* GPU Acceleration for Framer Motion elements */
+  .motion-gpu {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+}

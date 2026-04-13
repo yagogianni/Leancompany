@@ -72,7 +72,7 @@ function App() {
           </p>
           
           <button 
-            onClick={() => scrollToForm(2)}
+            onClick={() => window.open('https://wa.me/5544999061699?text=Olá! Gostaria de solicitar um diagnóstico gratuito para a minha empresa.', '_blank')}
             className="relative group flex items-center justify-center gap-3 px-8 py-4 mx-auto bg-[#25D366] text-white font-bold rounded-lg shadow-[0_4px_14px_rgba(37,211,102,0.4)] hover:bg-[#20bd5a] hover:scale-105 transition-all duration-300 w-full sm:w-auto overflow-hidden"
           >
             <span className="absolute inset-0 rounded-lg bg-[#25D366] opacity-40 animate-ping group-hover:animate-none"></span>
